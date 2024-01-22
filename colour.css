@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(232, 231, 231);
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-label {
+    flex: 1;
+    text-align: right;
+  }
+
+  .slider-value {
+    flex: 1;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+.picker {
+    text-align: center;
+    margin: 20px;
+}
+
+.color-display {
+    width: 100%;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Felles design for sliderne */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    background: var(--slider-background);
+    width:300px; /* Endre bredden til 100% for å gjøre slideren bredere */
+    height: 25px; /* Øk høyden etter behov */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; /* Øk bredden på tommelen etter behov */
+    height: 30px; /* Øk høyden på tommelen etter behov */
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Farger for sliderne */
+#red {
+    --slider-background: linear-gradient(to right, #000000, #ff0000);
+}
+
+#green {
+    --slider-background: linear-gradient(to right, #000000, #00FF00);
+}
+
+#blue {
+    --slider-background: linear-gradient(to right, #000000, #0000ff);
+}
+
+#lightness {
+    --slider-background: linear-gradient(to right, hsl(0, 0%, 0%), hsl(0, 0%, 100%));
+}
+
+/* Oppdater "chroma" slideren for gradvis økning i metning */
+#chroma {
+    --slider-background: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 100%, 50%));
+}
+
+/* Endre "hue" sliderens bakgrunnsfarge til en LCH-farge */
+#hue {
+    --slider-background: linear-gradient(to right,#ff0099,#ff0000,#ff9900,#ccff00,#33ff00,#00ff66,#00ffff,#0066ff,#3300ff,#cc00ff);
+}

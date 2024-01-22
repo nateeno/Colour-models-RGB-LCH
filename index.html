@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Picker</title>
+    <link rel="stylesheet" type="text/css" href="colour.css" />
+  </head>
+  <body>
+    <div class="picker">
+      <h2>RGB Color Picker</h2>
+      <!-- Bruk egendefinerte slider-elementer med gradient bakgrunn -->
+      <div class="slider-container">
+        <label class="slider-label">R</label>
+        <p id="rValue" class="slider-value">0</p>
+        <input type="range" id="red" min="0" max="255" class="slider" />
+      </div>
+      <div class="slider-container">
+        <label class="slider-label">G</label>
+        <p id="gValue" class="slider-value">0</p>
+        <input type="range" id="green" min="0" max="255" class="slider" />
+      </div>
+      <div class="slider-container">
+        <label class="slider-label">B</label>
+        <p id="bValue" class="slider-value">0</p>
+        <input type="range" id="blue" min="0" max="255" class="slider" />
+      </div>
+      <div id="rgbColor" class="color-display"></div>
+    </div>
+
+    <div class="picker">
+      <h2>LCH Color Picker</h2>
+      <!-- Bruk egendefinerte slider-elementer med gradient bakgrunn -->
+      <div class="slider-container">
+        <label class="slider-label">L</label>
+        <p id="lValue" class="slider-value">0</p>
+        <input type="range" id="lightness" min="0" max="100" class="slider" />
+      </div>
+      <div class="slider-container">
+        <label class="slider-label">C</label>
+        <p id="cValue" class="slider-value">0</p>
+        <input type="range" id="chroma" min="0" max="100" class="slider" />
+      </div>
+      <div class="slider-container">
+        <label class="slider-label">H</label>
+        <p id="hValue" class="slider-value">0</p>
+        <input type="range" id="hue" min="0" max="360" class="slider" />
+      </div>
+      <div id="lchColor" class="color-display"></div>
+    </div>
+    <script src="jscolour.js"></script>
+  </body>
+</html>
