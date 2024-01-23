@@ -50,7 +50,6 @@ function updateColor(type) {
   valueGroup.l.textContent = lightness.value;
 }
 
-
 function addSlidersListeners(sliderGroup, updateFunction) {
   Object.values(sliderGroup).forEach((slider) => slider.addEventListener("input", updateFunction));
 }
@@ -59,3 +58,4 @@ addSlidersListeners(sliders.rgb, () => updateColor({ sliders, display: displays,
 addSlidersListeners(sliders.lch, () => updateColor({ sliders, display: displays, valueGroup: values }));
 
 updateColor({ sliders, display: displays, valueGroup: values });
+
